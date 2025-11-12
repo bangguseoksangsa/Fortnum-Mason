@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트넘 앤 메이슨 레트로 뮤지컬 어드벤트 캘린더 - 국내 최저가</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            line-height: 1.8;
+            color: #1a1a1a;
+            background: linear-gradient(180deg, #f8f6f0 0%, #fdfbf7 100%);
+            padding: 0;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 10px 60px rgba(0, 140, 140, 0.1);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #006666 0%, #008C8C 100%);
+            color: white;
+            padding: 60px 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(212,175,55,0.15) 0%, transparent 70%);
+            animation: pulse 15s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.1); opacity: 0.5; }
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .subtitle {
+            font-size: 1.25em;
+            font-weight: 300;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+            color: #D4AF37;
+        }
+        
+        .savings-badge {
+            display: inline-block;
+            background-color: #D4AF37;
+            color: #1a1a1a;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-size: 1.15em;
+            font-weight: 700;
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+        
+        .urgency-banner {
+            background-color: #D4AF37;
+            color: #1a1a1a;
+            text-align: center;
+            padding: 15px;
+            font-weight: 600;
+            font-size: 1.05em;
+        }
+        
+        .content {
+            padding: 60px 50px;
+        }
+        
+        .intro {
+            font-size: 1.05em;
+            color: #4a5568;
+            margin-bottom: 50px;
+            line-height: 2;
+        }
+        
+        .intro p {
+            margin-bottom: 20px;
+        }
+        
+        .intro strong {
+            color: #008C8C;
+            font-weight: 600;
+        }
+        
+        .why-buy-now {
+            background: linear-gradient(135deg, #008C8C 0%, #006666 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 4px;
+            margin: 50px 0;
+        }
+        
+        .why-buy-now h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            text-align: center;
+            color: #D4AF37;
+        }
+        
+        .reason-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+        
+        .reason-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 25px;
+            border-radius: 4px;
+            border-left: 4px solid #D4AF37;
+        }
+        
+        .reason-item h4 {
+            font-size: 1.2em;
+            margin-bottom: 12px;
+            color: #D4AF37;
+            font-weight: 600;
+        }
+        
+        .reason-item p {
+            font-size: 0.95em;
+            line-height: 1.7;
+            opacity: 0.95;
+        }
+        
+        .images {
+            margin: 60px 0;
+            display: grid;
+            gap: 20px;
+        }
+        
+        .images img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            transition: transform 0.3s ease;
+            border: 1px solid #e8e6e0;
+        }
+        
+        .images img:hover {
+            transform: scale(1.02);
+        }
+        
+        .price-section {
+            margin: 70px 0;
+            padding: 50px;
+            background: #f8f6f0;
+            border-radius: 4px;
+            border: 2px solid #008C8C;
+        }
+        
+        .price-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #008C8C;
+            font-weight: 600;
+        }
+        
+        .price-comparison {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .price-option {
+            background-color: white;
+            padding: 35px 30px;
+            border-radius: 4px;
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        
+        .price-option:hover {
+            border-color: #008C8C;
+        }
+        
+        .price-option h4 {
+            font-size: 1.3em;
+            margin-bottom: 25px;
+            font-weight: 600;
+            color: #2d3748;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .price-option.diy h4::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 24px;
+            background-color: #dc2626;
+        }
+        
+        .price-option.service {
+            border-color: #008C8C;
+            border-width: 3px;
+            position: relative;
+            background: linear-gradient(135deg, #ffffff 0%, #f0fffe 100%);
+        }
+        
+        .price-option.service h4::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 24px;
+            background-color: #008C8C;
+        }
+        
+        .recommended-tag {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background-color: #D4AF37;
+            color: #1a1a1a;
+            padding: 5px 18px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: 700;
+        }
+        
+        .price-detail {
+            font-size: 0.95em;
+            margin-bottom: 12px;
+            color: #64748b;
+            padding-left: 24px;
+            position: relative;
+        }
+        
+        .price-detail::before {
+            content: '·';
+            position: absolute;
+            left: 8px;
+            font-weight: bold;
+            color: #cbd5e0;
+        }
+        
+        .price-detail.highlight {
+            color: #dc2626;
+            font-weight: 600;
+        }
+        
+        .price-detail.good {
+            color: #059669;
+            font-weight: 600;
+        }
+        
+        .total-price {
+            font-size: 2.2em;
+            font-weight: 700;
+            margin-top: 25px;
+            text-align: center;
+            color: #2d3748;
+            padding-top: 25px;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .service .total-price {
+            color: #008C8C;
+        }
+        
+        .highlight-box {
+            background-color: #fff7e6;
+            border-left: 4px solid #D4AF37;
+            color: #78350f;
+            padding: 25px 30px;
+            text-align: center;
+            font-size: 1.1em;
+            line-height: 1.8;
+            font-weight: 500;
+        }
+        
+        .info-box {
+            background-color: #e0f2f1;
+            border-left: 4px solid #008C8C;
+            padding: 25px 30px;
+            margin: 40px 0;
+            border-radius: 4px;
+        }
+        
+        .info-box h4 {
+            color: #008C8C;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .info-box p {
+            color: #2d3748;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+        
+        .social-proof {
+            background-color: #f0fffe;
+            border: 2px solid #008C8C;
+            padding: 30px;
+            border-radius: 4px;
+            margin: 50px 0;
+            font-style: italic;
+            position: relative;
+        }
+        
+        .social-proof::before {
+            content: '"';
+            font-size: 4em;
+            color: #008C8C;
+            opacity: 0.3;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .social-proof p {
+            font-size: 1.05em;
+            line-height: 1.9;
+            color: #2d3748;
+            padding-left: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .social-proof .author {
+            text-align: right;
+            font-weight: 600;
+            color: #008C8C;
+            font-style: normal;
+            padding-right: 20px;
+        }
+        
+        .cta-section {
+            text-align: center;
+            margin: 60px 0;
+            padding: 40px;
+            background: linear-gradient(135deg, #008C8C 0%, #006666 100%);
+            border-radius: 4px;
+        }
+        
+        .cta-section h3 {
+            font-family: 'Playfair Display', serif;
+            color: #D4AF37;
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+        
+        .cta-section p {
+            color: white;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #D4AF37;
+            color: #1a1a1a;
+            text-align: center;
+            padding: 22px 70px;
+            font-size: 1.4em;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            letter-spacing: -0.3px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .cta-button:hover {
+            background-color: #c49d2f;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+        }
+        
+        .cta-price {
+            display: block;
+            font-size: 0.65em;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+        
+        .guarantee {
+            text-align: center;
+            margin-top: 30px;
+            color: white;
+            font-size: 0.9em;
+        }
+        
+        .reference {
+            text-align: center;
+            padding: 40px 50px;
+            background-color: #f8f6f0;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.9em;
+            color: #64748b;
+        }
+        
+        .reference a {
+            color: #008C8C;
+            text-decoration: none;
+            border-bottom: 1px solid #b3d9d9;
+            transition: border-color 0.3s ease;
+        }
+        
+        .reference a:hover {
+            border-bottom-color: #008C8C;
+        }
+        
+        .reference p {
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 40px 30px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .subtitle {
+                font-size: 1.1em;
+            }
+            
+            .content {
+                padding: 40px 30px;
+            }
+            
+            .reason-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .price-section {
+                padding: 30px 20px;
+            }
+            
+            .price-comparison {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .cta-button {
+                padding: 18px 40px;
+                font-size: 1.2em;
+            }
+            
+            .reference {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="urgency-banner">
+        ⚠️ 크리스마스 시즌 한정 수량 | 조기 품절 예상 | 지금이 마지막 기회입니다
+    </div>
+    
+    <div class="container">
+        <div class="hero">
+            <h1>포트넘 앤 메이슨<br>레트로 뮤지컬 어드벤트 캘린더</h1>
+            <p class="subtitle">영국 왕실 御用達 브랜드의 크리스마스 컬렉션</p>
+            <div class="savings-badge">직접 직구 대비 30,000원 절약</div>
+        </div>
+        
+        <div class="content">
+            <div class="intro">
+                <p>
+                    1707년부터 영국 왕실에 납품해온 <strong>포트넘 앤 메이슨</strong>의 이 우아한 어드벤트 축음기는 
+                    크리스마스 카운트다운에 특별한 매력을 더합니다. 
+                    <strong>24개의 미니 디스크에 담긴 클래식 크리스마스 캐롤</strong>과 함께, 
+                    <strong>3개의 녹음 가능한 디스크</strong>로 직접 목소리를 담아 소중한 메시지를 전할 수 있습니다.
+                </p>
+                <p>
+                    Barbara Behr가 디자인하고 Thomas Schulte-Ebbert가 음악을 감독한 이 제품은 
+                    골드 포일 디테일로 마무리되어 오래 간직하고 싶은 추억의 선물이 됩니다.
+                </p>
+            </div>
+            
+            <div class="info-box">
+                <h4>💡 왜 이 스토어가 더 저렴할까요?</h4>
+                <p>
+                    이 스토어도 해외에서 구매하여 국내로 배송하는 시스템입니다. 
+                    하지만 <strong>대량 구매를 통한 단가 절감</strong>과 <strong>브랜드 직접 제휴 할인</strong>으로 
+                    개인이 직접 구매하는 것보다 훨씬 저렴한 가격을 제공합니다.
+                </p>
+                <p>
+                    배송 기간은 비슷하지만, 여러분은 <strong>복잡한 해외 쇼핑몰 가입, 영문 주문, 
+                    배대지 신청, 통관 절차 등의 번거로움 없이 원클릭으로 주문</strong>할 수 있습니다.
+                </p>
+            </div>
+            
+            <div class="why-buy-now">
+                <h3>전문 구매대행을 이용해야 하는 4가지 이유</h3>
+                <div class="reason-grid">
+                    <div class="reason-item">
+                        <h4>1. 압도적 가격 우위</h4>
+                        <p>대량 구매 할인과 브랜드 제휴로 개인 직구 대비 3만원 절약. 같은 배송 기간에 더 저렴한 가격.</p>
+                    </div>
+                    <div class="reason-item">
+                        <h4>2. 복잡한 절차 제로</h4>
+                        <p>영국 사이트 가입, 영문 주소 입력, 배대지 신청, 통관번호 입력 등 모든 복잡한 과정을 전문가가 대행.</p>
+                    </div>
+                    <div class="reason-item">
+                        <h4>3. 전문가 관리</h4>
+                        <p>수백 건의 해외 구매 경험이 있는 전문 업체가 통관부터 배송까지 완벽하게 관리. 분실/파손 리스크 최소화.</p>
+                    </div>
+                    <div class="reason-item">
+                        <h4>4. 시간과 스트레스 절약</h4>
+                        <p>직접 구매 시 필요한 최소 3~4시간의 조사, 가입, 주문 과정을 단 3분으로 압축. 정신적 스트레스 제로.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="social-proof">
+                <p>
+                    "처음엔 직접 직구를 해볼까 했는데, 영국 사이트 가입부터 막막하더라고요. 
+                    배대지도 알아보고 통관번호도 준비해야 하고... 너무 복잡해서 이 스토어를 이용했는데 
+                    가격도 제가 계산한 것보다 저렴하고 주문은 3분 만에 끝났어요. 
+                    받아보니 퀄리티가 상상 이상이고, 녹음 기능으로 아이 목소리를 담아서 
+                    평생 간직할 추억이 생겼습니다. 번거로움 없이 이렇게 좋은 선물을 받을 수 있어서 정말 만족스러웠어요!"
+                </p>
+                <div class="author">- 실제 구매자 후기</div>
+            </div>
+            
+            <div class="images">
+                <img src="https://www.fortnumandmason.com/media/catalog/product/5/2/5219521_fmxmas25_ag_retro_recordable_musical_advent_gramophone_mob_sq_gif.gif?width=1244" alt="포트넘 앤 메이슨 어드벤트 캘린더 애니메이션">
+                <img src="https://www.fortnumandmason.com/media/catalog/product/5/2/5219521_fmxmas25_ag_retro_recordable_musical_advent_gramophone_mob_sq_b.jpg?width=1244" alt="포트넘 앤 메이슨 어드벤트 캘린더 상세">
+                <img src="https://www.fortnumandmason.com/media/catalog/product/5/2/5219521_fmxmas25_ag_retro_recordable_musical_advent_gramophone_mob_sq_a.jpg?width=1244" alt="포트넘 앤 메이슨 어드벤트 캘린더 전체">
+            </div>
+            
+            <div class="price-section">
+                <h3>냉정한 가격 비교 (실제 계산)</h3>
+                
+                <div class="price-comparison">
+                    <div class="price-option diy">
+                        <h4>직접 해외 직구</h4>
+                        <div class="price-detail">상품가 £55.00 (약 95,000원)</div>
+                        <div class="price-detail">국제 배송비 £15~20 (약 26,000~34,000원)</div>
+                        <div class="price-detail">배대지 수수료 약 8,000원</div>
+                        <div class="price-detail">환율 변동 리스크 및 수수료</div>
+                        <div class="price-detail highlight">영문 사이트 가입 및 주문</div>
+                        <div class="price-detail highlight">배대지 신청 및 통관 절차</div>
+                        <div class="price-detail highlight">개인이 모든 리스크 부담</div>
+                        <div class="total-price">약 140,000원</div>
+                    </div>
+                    
+                    <div class="price-option service">
+                        <div class="recommended-tag">최선택</div>
+                        <h4>전문 구매대행</h4>
+                        <div class="price-detail">대량 구매 할인가 적용</div>
+                        <div class="price-detail">브랜드 직접 제휴 할인</div>
+                        <div class="price-detail">모든 배송비 및 수수료 포함</div>
+                        <div class="price-detail good">3분 만에 원클릭 주문 완료</div>
+                        <div class="price-detail good">복잡한 절차 완전 제로</div>
+                        <div class="price-detail good">전문가가 통관부터 배송까지 관리</div>
+                        <div class="price-detail good">안심 구매 보장</div>
+                        <div class="total-price">110,000원</div>
+                    </div>
+                </div>
+                
+                <div class="highlight-box">
+                    <strong>같은 해외 구매인데 3만원이나 저렴하고, 복잡한 과정은 모두 생략됩니다.</strong><br>
+                    시간과 돈을 동시에 절약하는 가장 현명한 선택입니다.
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <h3>가장 쉽고 저렴한 구매 방법</h3>
+                <p>30,000원 절약 + 복잡한 절차 제로 + 전문가 관리</p>
+                <a href="https://smartstore.naver.com/stjohns/products/6035956097?nl-query=%ED%8F%AC%ED%8A%B8%EB%84%98+%EB%A9%94%EC%9D%B4%EC%8A%A8+%EB%A0%88%ED%8A%B8%EB%A1%9C+%EC%96%B4%EB%93%9C%EB%B2%A4%ED%8A%B8+%EC%BA%98%EB%A6%B0%EB%8D%94&nl-ts-pid=jeepZlqVN8CssmlQSnossssssON-153397&NaPm=ct%3Dmhvwfzmg%7Cci%3D2207adea596d693732fef9416ca25b0885182557%7Ctr%3Dsls%7Csn%3D2434805%7Chk%3D16a14da98f0cbe3042bd48cea091460462b7da84" class="cta-button" target="_blank">
+                    3분 만에 주문 완료하기
+                    <span class="cta-price">최저가 110,000원</span>
+                </a>
+                <div class="guarantee">✓ 안전한 결제 보장 | ✓ 정품 보증 | ✓ 전문가 구매대행</div>
+            </div>
+        </div>
+        
+        <div class="reference">
+            <p>참고: <a href="https://www.fortnumandmason.com/retro-recordable-musical-advent-gramophone" target="_blank">포트넘 앤 메이슨 공식 홈페이지</a></p>
+            <p style="font-size: 0.85em; margin-top: 8px;">배터리: AA 배터리 3개 필요 (별도 구매)</p>
+        </div>
+    </div>
+</body>
+</html>
