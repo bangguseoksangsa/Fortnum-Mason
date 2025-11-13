@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><포트넘 앤 메이슨> 어드벤트 캘린더 - 국내 최저가</title>
+    <title>포트넘 앤 메이슨 레트로 뮤지컬 어드벤트 캘린더 - 국내 최저가</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
@@ -391,11 +391,36 @@
             padding-right: 10px;
         }
         
+        .browser-notice {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            border-left: 4px solid #2e7d32;
+            padding: 20px 25px;
+            margin: 30px 0;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 0.95em;
+            color: #1b5e20;
+            line-height: 1.8;
+        }
+        
+        .browser-notice strong {
+            color: #1b5e20;
+            font-size: 1.1em;
+        }
+        
+        .browser-notice small {
+            display: block;
+            margin-top: 8px;
+            font-size: 0.9em;
+            color: #2e7d32;
+        }
+        
         .app-notice {
             background: #fff3cd;
             border: 2px solid #ffc107;
             padding: 20px 25px;
-            margin: 30px 0;
+            margin: 20px 0;
             border-radius: 4px;
             text-align: center;
             font-size: 0.95em;
@@ -405,7 +430,7 @@
         
         .app-notice strong {
             color: #664d03;
-            font-size: 1.1em;
+            font-size: 1.05em;
         }
         
         .app-notice-mobile {
@@ -453,6 +478,7 @@
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
             line-height: 1.4;
             cursor: pointer;
+            border: none;
         }
         
         .cta-button:hover {
@@ -547,9 +573,15 @@
                 font-size: 0.95em;
             }
             
-            .app-notice {
+            .browser-notice {
                 padding: 18px 20px;
                 margin: 25px 0;
+                font-size: 0.9em;
+            }
+            
+            .app-notice {
+                padding: 18px 20px;
+                margin: 20px 0;
                 font-size: 0.9em;
             }
             
@@ -814,14 +846,20 @@
                 </div>
             </div>
             
+            <div class="browser-notice">
+                🌐 <strong>최적의 구매 환경 안내</strong><br>
+                크롬(Chrome) 브라우저에서 열면 가장 안정적으로 구매하실 수 있습니다.<br>
+                <small>안드로이드: 자동으로 크롬에서 열립니다 | iOS: 링크를 복사하여 크롬에서 붙여넣으세요</small>
+            </div>
+            
             <div class="app-notice">
                 <span class="app-notice-mobile">
-                    📱 <strong>모바일 이용 안내</strong><br>
-                    링크를 길게 눌러 "Safari에서 열기" 또는 "Chrome에서 열기"를 선택하시거나,<br>
-                    링크를 복사한 후 네이버 앱 주소창에 붙여넣으면 정상적으로 접속됩니다.
+                    📱 <strong>추가 안내</strong><br>
+                    링크가 네이버 앱으로 열리는 경우, 링크를 길게 눌러 "크롬에서 열기"를 선택하시거나,<br>
+                    링크를 복사한 후 크롬 브라우저 주소창에 붙여넣으면 정상적으로 접속됩니다.
                 </span>
                 <span class="app-notice-desktop">
-                    📱 <strong>모바일에서 앱으로 열리는 경우:</strong> 링크를 길게 눌러 "Safari에서 열기" 또는 "Chrome에서 열기"를 선택하시거나, 링크를 복사한 후 네이버 앱 주소창에 붙여넣으면 정상적으로 접속됩니다.
+                    📱 <strong>모바일 이용 시:</strong> 링크가 네이버 앱으로 열리는 경우, 링크를 길게 눌러 "크롬에서 열기"를 선택하시거나, 링크를 복사한 후 크롬 브라우저 주소창에 붙여넣으면 정상적으로 접속됩니다.
                 </span>
             </div>
             
@@ -830,7 +868,7 @@
                 <p>30,000원 절약 + 복잡한 절차 제로 + 전문가 관리</p>
                 <a href="javascript:void(0);" 
                    class="cta-button" 
-                   onclick="window.open('https://smartstore.naver.com/stjohns/products/6035956097?nl-query=%ED%8F%AC%ED%8A%B8%EB%84%98+%EC%95%A4+%EB%A9%94%EC%9D%B4%EC%8A%A8+%EB%A0%88%ED%8A%B8%EB%A1%9C+%EC%96%B4%EB%93%9C%EB%B2%A4%ED%8A%B8+%EC%BA%98%EB%A6%B0%EB%8D%94&nl-ts-pid=jeRyDsqosesssMmFMtsssssss8K-289007&NaPm=ct%3Dmhwr38g0%7Cci%3D999d2f7aa9964c7db2cfabb19b146e6eec04511f%7Ctr%3Dsls%7Csn%3D2434805%7Chk%3De235610bb77bf917f1652902c08248e67095fc3b', '_blank', 'noopener,noreferrer'); return false;">
+                   onclick="openInBrowser(); return false;">
                     3분 만에 주문 완료하기
                     <span class="cta-price">최저가 110,000원</span>
                 </a>
@@ -843,7 +881,30 @@
             <p style="font-size: 0.85em; margin-top: 8px;">배터리: AA 배터리 3개 필요 (별도 구매)</p>
         </div>
     </div>
+
+    <script>
+        function openInBrowser() {
+            const url = 'https://smartstore.naver.com/stjohns/products/6035956097?nl-query=%ED%8F%AC%ED%8A%B8%EB%84%98+%EC%95%A4+%EB%A9%94%EC%9D%B4%EC%8A%A8+%EB%A0%88%ED%8A%B8%EB%A1%9C+%EC%96%B4%EB%93%9C%EB%B2%A4%ED%8A%B8+%EC%BA%98%EB%A6%B0%EB%8D%94&nl-ts-pid=jeRyDsqosesssMmFMtsssssss8K-289007&NaPm=ct%3Dmhwr38g0%7Cci%3D999d2f7aa9964c7db2cfabb19b146e6eec04511f%7Ctr%3Dsls%7Csn%3D2434805%7Chk%3De235610bb77bf917f1652902c08248e67095fc3b';
+            const isAndroid = /Android/i.test(navigator.userAgent);
+            const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+            
+            if (isAndroid) {
+                // 안드로이드: 크롬 Intent로 열기 시도
+                const chromeIntent = 'intent://' + url.replace(/https?:\/\//, '') + '#Intent;scheme=https;package=com.android.chrome;end';
+                window.location.href = chromeIntent;
+                
+                // 2.5초 후에도 페이지가 그대로면 일반 링크로 폴백
+                setTimeout(function() {
+                    window.open(url, '_blank', 'noopener,noreferrer');
+                }, 2500);
+            } else if (isIOS) {
+                // iOS: 새 탭에서 열기 (크롬 강제 불가)
+                window.open(url, '_blank', 'noopener,noreferrer');
+            } else {
+                // 데스크톱: 새 탭에서 열기
+                window.open(url, '_blank', 'noopener,noreferrer');
+            }
+        }
+    </script>
 </body>
 </html>
-
-
